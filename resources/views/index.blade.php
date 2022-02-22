@@ -365,8 +365,7 @@
     </div>
    	<!-- contact section end -->
 @include('footer')
-	<div class="copyright">2019 All Rights Reserved. <a href="https://html.design">Free html  Templates</a></div>
-
+	<div class="copyright">Made with love. <a href="https://html.design">konarch prasad</a></div>
 
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
