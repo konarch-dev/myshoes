@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('welcome/', function () {
     return view('welcome');
 });
+
+
+
+Route::get('/', function () {
+    return view('index');
+});
+
+Route::get('/shoes', function () {
+    return view('shoes');
+});
+
+Route::get('/collection', function () {
+    return view('collection');
+});
+
+Route::get('/racing-boot', function () {
+    return view('racing-boot');
+});
+
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('send-mail',[MailController::class,'sendEmail']);
