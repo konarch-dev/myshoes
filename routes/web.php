@@ -41,4 +41,14 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('send-mail',[MailController::class,'sendEmail']);
+Route::get('send-mail', function () {
+   
+    $details = [
+        'title' => 'Pulloshoes',
+        'body' => 'Thanks for contacting us we will get back you shortly'
+    ];
+   
+    \Mail::to(['konarch2022@gmail.com','konurocks@gmail.com'])->send(new \App\Mail\MyTestMail($details));
+   
+    dd("Email is Sent.");
+});
