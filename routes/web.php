@@ -19,17 +19,10 @@ Route::get('welcome/', function () {
 
 
 Route::get('/currencyapi', function () {
- $url_name = "https://v6.exchangerate-api.com/v6/8aa0ca713a87af935d0a12ce/latest/USD";
-
-  $ch_session = curl_init();
-
-curl_setopt($ch_session, CURLOPT_RETURNTRANSFER, 1);
-
-  curl_setopt($ch_session, CURLOPT_URL, $url_name);
-
-  $result_url = curl_exec($ch_session);
-
-  return $result_url;
+ 
+$req_url = 'https://v6.exchangerate-api.com/v6/8aa0ca713a87af935d0a12ce/latest/USD';
+$response_json = file_get_contents($req_url);
+return $response = json_decode($response_json);
 });
 
 
