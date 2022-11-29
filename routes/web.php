@@ -25,7 +25,7 @@ Route::get('/currencyapi', function () {
 
 curl_setopt($ch_session, CURLOPT_RETURNTRANSFER, 1);
 
-  curl_setopt($ch_session, CURLOPT_URL, $url);
+  curl_setopt($ch_session, CURLOPT_URL, $url_name);
 
   $result_url = curl_exec($ch_session);
 
